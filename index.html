@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ali Larbi — NPI & Advanced Manufacturing Expert</title>
+<meta name="description" content="Ali Larbi is an NPI and advanced manufacturing expert with 10+ years scaling operations across semiconductor, electronics, and energy industries.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --teal:#0a6e55;--teal-mid:#1a9e78;--teal-light:#e0f2ec;--teal-dark:#064a39;
+  --ink:#0d1a15;--ink-soft:#3d524a;--ink-muted:#7a8f87;
+  --surface:#f5f8f6;--white:#ffffff;
+  --border:rgba(10,110,85,0.1);--border-md:rgba(10,110,85,0.2);
+  --max:1100px;--pad:40px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Syne',sans-serif;background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden;font-size:15px}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px var(--pad);
+  background:rgba(255,255,255,0.95);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-size:16px;font-weight:700;color:var(--ink);text-decoration:none}
+.nav-logo span{color:var(--teal)}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--ink-muted);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-cta{font-size:12px;font-weight:600;background:var(--teal);color:white;padding:8px 18px;border-radius:6px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--teal-dark)}
+
+/* ── WRAPPER ── */
+.wrap{max-width:var(--max);margin:0 auto;width:100%}
+
+/* ── HERO ── */
+.hero{padding:64px var(--pad) 60px;border-bottom:1px solid var(--border);background:var(--white)}
+.hero .wrap{display:grid;grid-template-columns:1fr 380px;gap:40px;align-items:center}
+.hero-kicker{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:20px}
+.hero-kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--teal);flex-shrink:0}
+.hero h1{font-family:'Lora',serif;font-size:clamp(32px,3.8vw,50px);line-height:1.12;letter-spacing:-.5px;color:var(--ink);margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--teal)}
+.hero-sub{font-size:14px;color:var(--ink-soft);line-height:1.8;max-width:460px;margin-bottom:28px;font-family:'Lora',serif}
+.hero-btns{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.btn-primary{font-size:13px;font-weight:600;background:var(--teal);color:white;padding:11px 22px;border-radius:6px;text-decoration:none;transition:all .2s}
+.btn-primary:hover{background:var(--teal-dark);transform:translateY(-1px)}
+.btn-outline{font-size:13px;font-weight:600;color:var(--teal);border:1.5px solid var(--teal);padding:10px 22px;border-radius:6px;text-decoration:none;transition:all .2s}
+.btn-outline:hover{background:var(--teal-light)}
+
+/* hero right */
+.hero-right{display:flex;flex-direction:column;gap:12px}
+.profile-card{background:white;border:1px solid var(--border-md);border-radius:12px;padding:22px;box-shadow:0 4px 20px rgba(10,110,85,.07)}
+.profile-top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.avatar{width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:17px;color:white;flex-shrink:0}
+.profile-name{font-size:14px;font-weight:700;color:var(--ink);margin-bottom:2px}
+.profile-title{font-size:11px;color:var(--ink-muted);line-height:1.4}
+.profile-focus{font-size:11px;font-weight:600;color:var(--teal);background:var(--teal-light);padding:7px 10px;border-radius:5px;margin-bottom:12px}
+.profile-tags{display:flex;flex-wrap:wrap;gap:5px}
+.ptag{font-size:10px;font-weight:500;padding:3px 9px;border-radius:4px;background:var(--surface);color:var(--ink-soft);border:1px solid var(--border-md)}
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.stat{background:white;border:1px solid var(--border-md);border-radius:9px;padding:14px 16px}
+.stat-num{font-family:'Lora',serif;font-size:22px;color:var(--teal);line-height:1;margin-bottom:3px}
+.stat-label{font-size:10px;color:var(--ink-muted);line-height:1.4}
+
+/* ── EXPERTISE BANNER ── */
+.expertise-banner{background:var(--ink);padding:16px var(--pad);overflow:hidden}
+.expertise-banner .wrap{display:flex;align-items:flex-start;flex-wrap:wrap;gap:10px}
+.eb-label{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-mid);white-space:nowrap;margin-right:16px;flex-shrink:0;padding-top:2px}
+.eb-items{display:flex;gap:16px;align-items:center;flex-wrap:wrap;flex:1}
+.eb-item{font-size:11px;color:rgba(255,255,255,.5);font-weight:500;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.eb-item::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--teal-mid);flex-shrink:0}
+
+/* ── SECTIONS SHARED ── */
+.section-eyebrow{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-eyebrow::after{content:'';flex:1;height:1px;background:var(--teal-light)}
+
+/* ── ABOUT ── */
+.about{padding:80px var(--pad);border-bottom:1px solid var(--border)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about h2{font-family:'Lora',serif;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.3px;color:var(--ink);margin-bottom:16px}
+.about h2 em{font-style:italic;color:var(--teal)}
+.about-body{font-size:14px;color:var(--ink-soft);line-height:1.85;margin-bottom:12px;font-family:'Lora',serif}
+.quote-block{margin-top:24px;padding:18px 20px;background:var(--surface);border-left:3px solid var(--teal);border-radius:0 7px 7px 0}
+.quote-text{font-family:'Lora',serif;font-size:15px;font-style:italic;color:var(--ink);line-height:1.6}
+.industries{display:grid;gap:10px;margin-bottom:24px}
+.industry{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--surface);border-radius:9px;border:1px solid var(--border)}
+.ind-badge{font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:3px;white-space:nowrap;margin-top:2px;flex-shrink:0}
+.ind-company{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.ind-proof{font-size:11px;color:var(--ink-muted);line-height:1.5}
+.pillars{display:grid;gap:8px;margin-top:20px}
+.pillar{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border-radius:7px;border:1px solid var(--border);background:white}
+.pillar-letter{font-family:'Lora',serif;font-size:19px;font-style:italic;color:var(--teal);min-width:22px;line-height:1}
+.pillar-title{font-size:12px;font-weight:600;color:var(--ink);margin-bottom:2px}
+.pillar-body{font-size:11px;color:var(--ink-muted);line-height:1.55}
+
+/* ── WORK ── */
+.work{padding:80px var(--pad);background:var(--surface);border-bottom:1px solid var(--border)}
+.work-header{display:grid;grid-template-columns:1fr auto;align-items:end;margin-bottom:36px;gap:20px}
+.work h2{font-family:'Lora',serif;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.3px;color:var(--ink)}
+.work h2 em{font-style:italic;color:var(--teal)}
+.work-sub{font-size:13px;color:var(--ink-muted);max-width:300px;text-align:right;line-height:1.6;font-family:'Lora',serif}
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.case{background:white;border-radius:12px;border:1px solid var(--border-md);padding:24px;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.case:hover{box-shadow:0 6px 24px rgba(10,110,85,.09);transform:translateY(-2px)}
+.case-index{font-family:'Lora',serif;font-size:30px;font-style:italic;color:var(--teal-light);line-height:1;margin-bottom:12px}
+.case-category{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:var(--teal-light);padding:3px 9px;border-radius:3px;display:inline-block;margin-bottom:12px;align-self:flex-start}
+.case h3{font-size:14px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:10px}
+.case-body{font-size:12px;color:var(--ink-muted);line-height:1.75;margin-bottom:18px;flex:1;font-family:'Lora',serif}
+.case-outcome{padding-top:14px;border-top:1px solid var(--border);font-size:11px;font-weight:600;color:var(--teal);display:flex;align-items:flex-start;gap:6px;line-height:1.5}
+.case-outcome::before{content:'→';flex-shrink:0}
+
+/* ── CONSULTING ── */
+.consulting{background:var(--teal-dark);padding:80px var(--pad);border-bottom:1px solid rgba(255,255,255,.06)}
+.consulting .section-eyebrow{color:var(--teal-mid)}
+.consulting .section-eyebrow::after{background:rgba(26,158,120,.3)}
+.consulting h2{font-family:'Lora',serif;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.3px;color:white;margin-bottom:12px}
+.consulting h2 em{font-style:italic;color:var(--teal-mid)}
+.consulting-sub{font-size:14px;color:rgba(255,255,255,.5);max-width:500px;margin-bottom:40px;line-height:1.8;font-family:'Lora',serif}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
+.service{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:22px;transition:background .2s}
+.service:hover{background:rgba(255,255,255,.08)}
+.service-num{font-family:'Lora',serif;font-size:26px;font-style:italic;color:rgba(26,158,120,.4);line-height:1;margin-bottom:12px}
+.service h3{font-size:14px;font-weight:600;color:white;margin-bottom:8px}
+.service-body{font-size:12px;color:rgba(255,255,255,.45);line-height:1.75;margin-bottom:14px;font-family:'Lora',serif}
+.service-tag{font-size:10px;font-weight:600;color:var(--teal-mid);letter-spacing:.04em}
+.consulting-cta{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:white;background:var(--teal-mid);padding:12px 24px;border-radius:7px;text-decoration:none;transition:all .2s}
+.consulting-cta:hover{background:var(--teal);transform:translateY(-1px)}
+
+/* ── EXPERTISE SECTION ── */
+.expertise-section{padding:80px var(--pad);border-bottom:1px solid var(--border)}
+.expertise-section .wrap{display:grid;grid-template-columns:280px 1fr;gap:64px;align-items:start}
+.expertise-section h2{font-family:'Lora',serif;font-size:clamp(22px,2.4vw,30px);line-height:1.25;letter-spacing:-.3px;color:var(--ink);margin-bottom:14px}
+.expertise-section h2 em{font-style:italic;color:var(--teal)}
+.exp-sub{font-size:13px;color:var(--ink-muted);line-height:1.75;font-family:'Lora',serif}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.skill-group{background:var(--surface);border-radius:9px;padding:16px 18px;border:1px solid var(--border)}
+.sg-title{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+.sg-list{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sg-list li{font-size:12px;color:var(--ink-soft);display:flex;align-items:center;gap:7px}
+.sg-list li::before{content:'';width:3px;height:3px;border-radius:50%;background:var(--teal-mid);flex-shrink:0}
+
+/* ── CONTACT ── */
+.contact{padding:80px var(--pad)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.contact h2{font-family:'Lora',serif;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.3px;color:var(--ink);margin-bottom:14px}
+.contact h2 em{font-style:italic;color:var(--teal)}
+.contact-sub{font-size:14px;color:var(--ink-soft);line-height:1.8;margin-bottom:24px;font-family:'Lora',serif}
+.contact-links{display:flex;flex-direction:column;gap:8px}
+.clink{display:flex;align-items:center;gap:12px;padding:12px 14px;background:var(--surface);border:1px solid var(--border-md);border-radius:7px;text-decoration:none;color:var(--ink-soft);font-size:12px;font-weight:500;transition:all .2s}
+.clink:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-light)}
+.clink-icon{width:30px;height:30px;border-radius:5px;background:var(--teal-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.clink-icon svg{width:14px;height:14px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.form{display:flex;flex-direction:column;gap:10px}
+.fg{display:flex;flex-direction:column;gap:4px}
+.fl{font-size:10px;font-weight:600;color:var(--ink-soft);letter-spacing:.05em;text-transform:uppercase}
+.fi,.ft{font-family:'Syne',sans-serif;font-size:13px;color:var(--ink);background:var(--surface);border:1px solid var(--border-md);border-radius:6px;padding:10px 13px;outline:none;transition:border-color .2s;width:100%}
+.fi:focus,.ft:focus{border-color:var(--teal)}
+.ft{resize:vertical;min-height:90px}
+.fsub{font-family:'Syne',sans-serif;font-size:13px;font-weight:600;letter-spacing:.03em;background:var(--teal);color:white;border:none;border-radius:6px;padding:12px;cursor:pointer;transition:background .2s}
+.fsub:hover{background:var(--teal-dark)}
+
+/* ── FOOTER ── */
+footer{padding:22px var(--pad);border-top:1px solid var(--border);background:var(--surface)}
+footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer-left{display:flex;flex-direction:column;gap:2px}
+.footer-name{font-size:13px;font-weight:700;color:var(--ink)}
+.footer-focus{font-size:11px;color:var(--teal);font-weight:500}
+.footer-links{display:flex;gap:18px}
+.footer-links a{font-size:12px;color:var(--ink-muted);text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--teal)}
+.footer-copy{font-size:11px;color:var(--ink-muted)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.hero-kicker{animation:fadeUp .5s .1s both}
+.hero h1{animation:fadeUp .5s .2s both}
+.hero-sub{animation:fadeUp .5s .3s both}
+.hero-btns{animation:fadeUp .5s .38s both}
+.hero-right{animation:fadeUp .5s .3s both}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .cases{grid-template-columns:1fr 1fr}
+  .services{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:767px){
+  :root{--pad:20px;--max:100%}
+  body{font-size:14px}
+
+  /* Nav */
+  nav{padding:12px 20px}
+  .nav-links{display:none}
+  .nav-cta{padding:8px 14px;font-size:12px}
+
+  /* Hero */
+  .hero{padding:40px 20px 36px}
+  .hero .wrap{grid-template-columns:1fr;gap:28px}
+  .hero-bg{display:none}
+  .hero h1{font-size:32px;letter-spacing:-.3px}
+  .hero-sub{font-size:14px}
+  .hero-btns{flex-direction:column;align-items:flex-start;gap:10px}
+  .btn-primary,.btn-outline{width:100%;text-align:center;padding:13px 20px}
+  .stats-row{grid-template-columns:1fr 1fr}
+  .profile-card{padding:18px}
+
+  /* Expertise banner */
+  .expertise-banner{padding:14px 20px}
+  .expertise-banner .wrap{flex-direction:column;gap:8px}
+  .eb-label{margin-right:0}
+  .eb-items{flex-wrap:wrap;gap:10px}
+  .eb-item{font-size:11px}
+
+  /* About */
+  .about{padding:48px 20px}
+  .about .wrap{grid-template-columns:1fr;gap:36px}
+  .about h2{font-size:26px}
+  .about-body{font-size:14px}
+  .industry{flex-direction:column;gap:8px}
+  .ind-badge{align-self:flex-start}
+
+  /* Work */
+  .work{padding:48px 20px}
+  .work-header{grid-template-columns:1fr;gap:10px}
+  .work-sub{text-align:left;max-width:100%}
+  .work h2{font-size:26px}
+  .cases{grid-template-columns:1fr;gap:16px}
+  .case{padding:20px}
+
+  /* How I work - fix the overflow */
+  section[style*="padding:64px 40px"]{padding:48px 20px !important}
+  section[style*="padding:64px 40px"] > div{max-width:100% !important}
+  section[style*="padding:64px 40px"] > div > div[style*="grid-template-columns:repeat(3"]{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:14px !important
+  }
+
+  /* Consulting */
+  .consulting{padding:48px 20px}
+  .consulting h2{font-size:26px}
+  .services{grid-template-columns:1fr;gap:14px}
+  .service{padding:20px}
+
+  /* NPI Philosophy section */
+  section[style*="padding:80px 40px"]{padding:48px 20px !important}
+  section[style*="padding:80px 40px"] > div{max-width:100% !important}
+  section[style*="padding:80px 40px"] > div > div[style*="grid-template-columns:1fr 1fr"]{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:28px !important
+  }
+
+  /* Expertise */
+  .expertise-section{padding:48px 20px}
+  .expertise-section .wrap{grid-template-columns:1fr;gap:28px}
+  .expertise-section h2{font-size:24px}
+  .skills-grid{grid-template-columns:1fr}
+
+  /* Contact */
+  .contact{padding:48px 20px}
+  .contact .wrap{grid-template-columns:1fr;gap:36px}
+  .contact h2{font-size:26px}
+
+  /* Footer */
+  footer .wrap{flex-direction:column;align-items:flex-start;gap:12px}
+  .footer-links{flex-wrap:wrap;gap:14px}
+}
+
+@media(max-width:480px){
+  :root{--pad:16px}
+  .hero h1{font-size:28px}
+  .stat-num{font-size:20px}
+  .profile-tags{gap:4px}
+  .ptag{font-size:10px;padding:3px 8px}
+  .hero-kicker{font-size:10px}
+  .cases{gap:12px}
+  .case h3{font-size:13px}
+  .work h2,.about h2,.consulting h2,.contact h2{font-size:23px}
+  .services{gap:12px}
+  .service h3{font-size:13px}
+}
+
+/* ── HOW I WORK ── */
+.how-section{padding:64px var(--pad);border-bottom:1px solid var(--border);background:var(--surface)}
+.how-title{font-family:'Lora',serif;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.3px;color:var(--ink);margin-bottom:32px}
+.how-title em{font-style:italic;color:var(--teal)}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.how-card{background:white;border-radius:12px;border:1px solid var(--border-md);padding:24px;position:relative;overflow:hidden}
+.how-card-yela{border-color:rgba(83,74,183,0.25)}
+.how-ai-badge{position:absolute;top:0;right:0;font-size:9px;font-weight:700;letter-spacing:.08em;background:linear-gradient(135deg,#534AB7,#7B74D9);color:white;padding:4px 12px;border-radius:0 12px 0 8px}
+.how-num{width:36px;height:36px;background:#e0f2ec;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-family:'Lora',serif;font-size:18px;font-style:italic;color:var(--teal)}
+.how-num-y{background:#EEEDFE;color:#534AB7;font-weight:600}
+.how-card-title{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:8px}
+.how-card-body{font-size:12px;color:var(--ink-muted);line-height:1.75}
+.how-yela-tag{font-size:11px;font-weight:600;color:#534AB7;margin-top:12px}
+
+/* ── HOW I WORK MOBILE ── */
+@media(max-width:767px){
+  .how-section{padding:48px var(--pad)}
+  .how-grid{grid-template-columns:1fr}
+  .how-card{padding:20px}
+}
+
+/* ── NPI PHILOSOPHY GRID ── */
+.npi-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+@media(max-width:767px){
+  .npi-grid{grid-template-columns:1fr;gap:32px}
+}
+
+/* ── HAMBURGER MENU ── */
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:200}
+.hamburger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:49px;left:0;right:0;background:white;border-bottom:1px solid var(--border);z-index:99;flex-direction:column;box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{font-size:15px;font-weight:500;color:var(--ink);padding:16px 20px;border-bottom:1px solid var(--border);text-decoration:none;transition:background .15s}
+.mobile-menu a:hover{background:var(--surface);color:var(--teal)}
+@media(max-width:768px){
+  .hamburger{display:flex}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Ali <span>Larbi</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#consulting">Consulting</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px">
+    <button class="hamburger" id="hamburger" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#contact" class="nav-cta">Work with Ali</a>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#work" onclick="closeMenu()">Work</a>
+  <a href="#consulting" onclick="closeMenu()">Consulting</a>
+  <a href="#expertise" onclick="closeMenu()">Expertise</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-left">
+      <div class="hero-kicker"><div class="hero-kicker-dot"></div>NPI & Advanced Manufacturing Expert · Austin, TX</div>
+      <h1>When manufacturing<br>needs to scale <em>fast</em><br>and get it <em>right.</em></h1>
+      <p class="hero-sub">10+ years turning R&D into high-volume production — across semiconductor, electronics, and energy industries. I build the operations systems, the teams, and the frameworks that make it stick.</p>
+      <div class="hero-btns">
+        <a href="#work" class="btn-primary">See my work</a>
+        <a href="#consulting" class="btn-outline">Consulting services</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="profile-card">
+        <div class="profile-top">
+          <div class="avatar">AL</div>
+          <div>
+            <p class="profile-name">Ali Larbi</p>
+            <p class="profile-title">Operations Executive · NPI & Advanced Manufacturing</p>
+          </div>
+        </div>
+        <p class="profile-focus">Specialization: NPI → HVM transitions at scale</p>
+        <div class="profile-tags">
+          <span class="ptag">ALD / CVD / PVD</span>
+          <span class="ptag">Lean Manufacturing</span>
+          <span class="ptag">FMEA · 8D</span>
+          <span class="ptag">Team Scaling</span>
+          <span class="ptag">Poka-Yoke Systems</span>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><div class="stat-num">10x</div><div class="stat-label">Team growth — few to hundreds, systems built to scale</div></div>
+        <div class="stat"><div class="stat-num">2nm</div><div class="stat-label">Industry-first ALD Moly node</div></div>
+        <div class="stat"><div class="stat-num">15%</div><div class="stat-label">Cycle time reduction via Lean</div></div>
+        <div class="stat"><div class="stat-num">Zero</div><div class="stat-label">Safety incidents across all launches</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE BANNER -->
+<div class="expertise-banner">
+  <div class="wrap">
+    <p class="eb-label">Proven across</p>
+    <div class="eb-items">
+      <span class="eb-item">Semiconductor Capital Equipment</span>
+      <span class="eb-item">Electronics Manufacturing</span>
+      <span class="eb-item">Energy Services</span>
+      <span class="eb-item">NPI to HVM Transitions</span>
+      <span class="eb-item">Advanced Materials</span>
+      <span class="eb-item">Multi-site Operations</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div>
+      <p class="section-eyebrow">About</p>
+      <h2>The expert you call when the <em>transition</em> can't fail</h2>
+      <p class="about-body">I'm an operations and NPI specialist with over a decade of experience at the most critical moment in any product's life — when R&D hands off to production and everything that can go wrong, does.</p>
+      <p class="about-body">My career spans three demanding industries. I started in high-pressure oil field environments with Halliburton in Algeria, moved into complex electronics manufacturing, and spent years in semiconductor capital equipment — including the operational ramp of a first-of-kind advanced deposition process at the cutting edge of logic node scaling.</p>
+      <p class="about-body">That cross-industry background is what makes my approach different. I bring the discipline of energy services, the precision of electronics manufacturing, and the technical depth of semiconductor operations to every engagement.</p>
+      <div class="quote-block">
+        <p class="quote-text">"Great operations aren't built on processes. They're built on people who understand why the process matters — and leaders who build that understanding deliberately."</p>
+      </div>
+    </div>
+    <div>
+      <p class="section-eyebrow">Who I work with</p>
+      <div class="industries">
+        <div class="industry">
+          <span class="ind-badge" style="background:#E1F5EE;color:#0a6e55">Semiconductor</span>
+          <div>
+            <p class="ind-company">Semiconductor & capital equipment companies</p>
+            <p class="ind-proof">Companies ramping new process nodes, launching next-generation deposition or etch equipment, or scaling an NPI program that can't afford defects at HVM.</p>
+          </div>
+        </div>
+        <div class="industry">
+          <span class="ind-badge" style="background:#E6F1FB;color:#185FA5">Advanced Mfg</span>
+          <div>
+            <p class="ind-company">Small-to-mid size manufacturers scaling up</p>
+            <p class="ind-proof">Growing companies that have outgrown informal processes and need structured NPI-to-HVM systems, team scaling frameworks, and error-proofing built in before it's too late.</p>
+          </div>
+        </div>
+        <div class="industry">
+          <span class="ind-badge" style="background:#FFF4E6;color:#B36A00">Industrial</span>
+          <div>
+            <p class="ind-company">Advanced materials, EV & industrial manufacturers</p>
+            <p class="ind-proof">Manufacturers in energy, battery technology, and industrial equipment who are navigating the same NPI-to-HVM transition challenges — often for the first time at scale.</p>
+          </div>
+        </div>
+      </div>
+      <p class="section-eyebrow" style="margin-top:22px">Leadership framework</p>
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-letter">C</span>
+          <div><p class="pillar-title">Clarity</p><p class="pillar-body">Every team member knows exactly what success looks like and why it matters. Ambiguity kills quality.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-letter">C</span>
+          <div><p class="pillar-title">Capability</p><p class="pillar-body">Technical depth in teams prevents defects before they happen. Built deliberately through coaching and structured development.</p></div>
+        </div>
+        <div class="pillar">
+          <span class="pillar-letter">C</span>
+          <div><p class="pillar-title">Culture</p><p class="pillar-body">95% retention during the most aggressive ramp of my career. Culture is an operational advantage — not a perk.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="work-header">
+      <div>
+        <p class="section-eyebrow">Case studies</p>
+        <h2>Where the hardest <em>problems</em> got solved</h2>
+      </div>
+      <p class="work-sub">Three proof points that define my approach to NPI and advanced manufacturing.</p>
+    </div>
+    <div class="cases">
+      <div class="case">
+        <div class="case-index">01</div>
+        <span class="case-category">Pain: No playbook exists</span>
+        <h3>Launching a process nobody has done before — and getting it right</h3>
+        <p class="case-body">The hardest NPI challenge is when your process is new to the world. No reference, no benchmark, no one to call. Every failure mode is unknown. I've led this exact scenario — building the operational framework from scratch, locking quality in before copy-exact closes the window. The result: on-time, zero-defect, first-of-kind.</p>
+        <div class="case-outcome">Zero-defect launch · On-time global fleet delivery · Industry first</div>
+      </div>
+      <div class="case">
+        <div class="case-index">02</div>
+        <span class="case-category">Pain: Growing too fast to control</span>
+        <h3>Scaling a team 10x without losing quality, safety, or culture</h3>
+        <p class="case-body">Fast growth breaks things — quality systems, safety culture, institutional knowledge. Most companies hire fast and fix problems later. I build the systems first: Poka-Yoke error-proofing at every station, structured onboarding, performance frameworks that scale with the team. 10x growth in 18 months. Zero safety incidents. 95% retention. That's architecture, not luck.</p>
+        <div class="case-outcome">95% retention · Zero incidents · Completed in 18 months</div>
+      </div>
+      <div class="case">
+        <div class="case-index">03</div>
+        <span class="case-category">Pain: Crisis mid-ramp</span>
+        <h3>When a critical issue surfaces mid-ramp and everything is at risk</h3>
+        <p class="case-body">It happens to every manufacturing program — a compatibility issue, a process gap, a failure mode nobody anticipated. The question is how fast you find it, how cleanly you fix it, and whether production keeps moving. Using structured FMEA and 8D methodology I've resolved these crises fast — isolating root cause, executing the fix across multiple sites, holding the zero-defect standard throughout.</p>
+        <div class="case-outcome">Root cause isolated · Zero-defect standard maintained · On-time delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW I WORK -->
+<section class="how-section" id="how">
+  <div class="wrap">
+    <p class="section-eyebrow">How I work</p>
+    <h2 class="how-title">Senior expertise. <em>No middlemen.</em></h2>
+    <div class="how-grid">
+
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <h3 class="how-card-title">You work directly with me</h3>
+        <p class="how-card-body">Every engagement is led by Ali Larbi personally. No account managers, no junior handoffs. You get the expertise you hired — directly, every time.</p>
+      </div>
+
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <h3 class="how-card-title">Backed by a specialist network</h3>
+        <p class="how-card-body">For engagements requiring additional depth — process engineering, quality systems, supply chain — I bring in trusted specialists scoped to your exact problem.</p>
+      </div>
+
+      <div class="how-card how-card-yela">
+        <div class="how-ai-badge">AI-POWERED</div>
+        <div class="how-num how-num-y">Y</div>
+        <h3 class="how-card-title">Accelerated by Yela</h3>
+        <p class="how-card-body">Yela is my AI operations intelligence system — handling analysis, documentation, and process mapping at speed. Engagements that take traditional consultants 8 weeks take me 3.</p>
+        <p class="how-yela-tag">Faster delivery · No shortcuts on quality</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTING -->
+<section class="consulting" id="consulting">
+  <div class="wrap">
+    <p class="section-eyebrow">Consulting</p>
+    <h2>Your NPI is stalled.<br>Your team is <em>struggling.</em><br>Let's fix it.</h2>
+    <p class="consulting-sub">I work with semiconductor companies, advanced materials manufacturers, and operations leaders who need senior-level NPI expertise — without a full-time hire.</p>
+    <div class="services">
+      <div class="service">
+        <div class="service-num">01</div>
+        <h3>The NPI Playbook</h3>
+        <p class="service-body">A documented system for taking products from prototype to high-volume manufacturing — without defects, delays, or team breakdown. Customized to your process, your team, your timeline. Deliverable: a playbook your operations can execute.</p>
+        <p class="service-tag">Engagement-based · 4–8 weeks</p>
+      </div>
+      <div class="service">
+        <div class="service-num">02</div>
+        <h3>Team scaling advisory</h3>
+        <p class="service-body">Growing a manufacturing team fast without losing quality, safety, or culture. Built from real experience scaling 30 to 215 technicians at zero safety incidents. I work with your leadership on assessments, frameworks, and coaching systems.</p>
+        <p class="service-tag">Advisory retainer · Hourly available</p>
+      </div>
+      <div class="service">
+        <div class="service-num">03</div>
+        <h3>Operations audit</h3>
+        <p class="service-body">Walk into your operation, identify the gaps, build the fix plan. FMEA, 8D, Lean applied to your specific bottlenecks. Deliverable: a prioritized roadmap with clear ownership and timelines your team can execute immediately.</p>
+        <p class="service-tag">Project-based · 2–4 weeks</p>
+      </div>
+    </div>
+    <a href="#contact" class="consulting-cta">Let's talk →</a>
+  </div>
+</section>
+
+<!-- NPI PHILOSOPHY -->
+<section id="philosophy" style="padding:80px 40px;border-bottom:1px solid rgba(10,110,85,0.1);background:var(--white)">
+  <div style="max-width:1100px;margin:0 auto">
+    <p style="font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#0a6e55;margin-bottom:14px;display:flex;align-items:center;gap:10px">The NPI philosophy<span style="flex:1;height:1px;background:#e0f2ec"></span></p>
+
+    <div class="npi-grid">
+      <div>
+        <h2 style="font-family:Lora,serif;font-size:clamp(24px,2.6vw,34px);line-height:1.2;letter-spacing:-.3px;color:#0d1a15;margin-bottom:20px">NPI isn't a phase.<br><em style="font-style:italic;color:#0a6e55">It's the window.</em></h2>
+        <p style="font-size:14px;color:#3d524a;line-height:1.85;margin-bottom:14px;font-family:Lora,serif">Every product will eventually move to High-Volume Manufacturing. That's inevitable. The real question — the one most companies never ask clearly enough — is: <strong>was it fully developed and improved while there was still room to do so?</strong></p>
+        <p style="font-size:14px;color:#3d524a;line-height:1.85;margin-bottom:14px;font-family:Lora,serif">NPI is the window. It's the phase where R&D and NPI engineers are still in the room. Where a process change can be made immediately — twisted, refined, error-proofed — before copy-exact locks everything in place. Once the product copies to HVM, that window closes. Forever.</p>
+        <p style="font-size:14px;color:#3d524a;line-height:1.85;font-family:Lora,serif">Most companies treat NPI as a checklist to get through. I treat it as the most important investment a manufacturing organization will ever make in a product's quality, reliability, and scalability.</p>
+        <div style="margin-top:24px;padding:20px 22px;background:#f5f8f6;border-left:3px solid #0a6e55;border-radius:0 8px 8px 0">
+          <p style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#0a6e55;margin-bottom:8px">Grounded in research</p>
+          <p style="font-family:Lora,serif;font-size:14px;font-style:italic;color:#0d1a15;line-height:1.6">M.S. thesis: Life Cycle Assessment applied to NPI — how LCA methodology helps companies build quality, sustainability, and process discipline into manufacturing before it scales. Published in the Journal of Environment and Waste Management.</p>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:14px">
+
+        <div style="background:#f5f8f6;border-radius:12px;border:1px solid rgba(10,110,85,0.15);padding:22px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+            <div style="width:36px;height:36px;background:#e0f2ec;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🔒</div>
+            <p style="font-size:13px;font-weight:600;color:#0d1a15">Poka-Yoke — built in, not bolted on</p>
+          </div>
+          <p style="font-size:12px;color:#7a8f87;line-height:1.75">I find the Poka-Yoke for every process — the error-proofing mechanism that makes defects physically impossible, not just unlikely. Built during NPI, these systems survive the move to HVM and protect quality at scale without adding headcount.</p>
+        </div>
+
+        <div style="background:#f5f8f6;border-radius:12px;border:1px solid rgba(10,110,85,0.15);padding:22px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+            <div style="width:36px;height:36px;background:#e0f2ec;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">📈</div>
+            <p style="font-size:13px;font-weight:600;color:#0d1a15">Scaled teams 10x — with systems that stick</p>
+          </div>
+          <p style="font-size:12px;color:#7a8f87;line-height:1.75">From a handful of technicians to hundreds — I've done it. Not just by hiring fast, but by building the onboarding infrastructure, performance frameworks, and operational systems that let a team scale without losing quality, safety, or culture.</p>
+        </div>
+
+        <div style="background:#f5f8f6;border-radius:12px;border:1px solid rgba(10,110,85,0.15);padding:22px">
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+            <div style="width:36px;height:36px;background:#e0f2ec;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0">🔄</div>
+            <p style="font-size:13px;font-weight:600;color:#0d1a15">LCA thinking applied to manufacturing</p>
+          </div>
+          <p style="font-size:12px;color:#7a8f87;line-height:1.75">Life Cycle Assessment isn't just for environmental compliance — it's a systems thinking framework. I apply it to NPI to map every process decision against its downstream impact in HVM: quality, cost, scalability, and compliance.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise-section" id="expertise">
+  <div class="wrap">
+    <div>
+      <p class="section-eyebrow">Expertise</p>
+      <h2>Deep technical and <em>operational</em> fluency</h2>
+      <p class="exp-sub">Built across three industries over a decade — with hands-on mastery of the tools, methodologies, and platforms that matter at scale in advanced manufacturing.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <p class="sg-title">NPI & Operations</p>
+        <ul class="sg-list">
+          <li>NPI to HVM strategy & execution</li>
+          <li>Copy-exact readiness & process lock</li>
+          <li>Production ramp planning & OEE</li>
+          <li>Lean manufacturing & Kaizen</li>
+          <li>Capacity planning & headcount scaling</li>
+          <li>Multi-site program management</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="sg-title">Technical process</p>
+        <ul class="sg-list">
+          <li>Advanced process development & transfer</li>
+          <li>FMEA · 8D · Root cause methodology</li>
+          <li>Statistical Process Control (SPC)</li>
+          <li>Poka-Yoke error-proofing systems</li>
+          <li>Process reliability & yield optimization</li>
+          <li>Life Cycle Assessment (LCA) — NPI application</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="sg-title">Leadership</p>
+        <ul class="sg-list">
+          <li>Team scaling at volume</li>
+          <li>Cross-functional influence</li>
+          <li>Coaching & mentoring</li>
+          <li>Stakeholder management</li>
+          <li>Change management</li>
+          <li>Multi-site execution</li>
+        </ul>
+      </div>
+      <div class="skill-group">
+        <p class="sg-title">Systems & platforms</p>
+        <ul class="sg-list">
+          <li>Advanced deposition systems</li>
+          <li>Vacuum & gas delivery systems</li>
+          <li>Manufacturing execution systems</li>
+          <li>Process control & SPC platforms</li>
+          <li>ERP, MES & data analytics tools</li>
+          <li>ISO 14001 certified</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="section-eyebrow">Contact</p>
+      <h2>Let's talk about what you're <em>building.</em></h2>
+      <p class="contact-sub">Whether it's a leadership role, a consulting engagement, or a conversation about an NPI challenge — I'm open to the right opportunities. Based in Austin, TX. Available for remote and on-site engagements.</p>
+      <a href="https://calendly.com/ali_larbi" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:white;background:#0a6e55;padding:12px 22px;border-radius:7px;text-decoration:none;margin-bottom:20px;transition:background .2s" onmouseover="this.style.background='#064a39'" onmouseout="this.style.background='#0a6e55'">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Book a 30-min discovery call
+      </a>
+      <div class="contact-links">
+        <a href="mailto:ali_larbi@outlook.com" class="clink">
+          <div class="clink-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          ali_larbi@outlook.com
+        </a>
+        <a href="https://www.linkedin.com/in/ali-larbi" target="_blank" rel="noopener noreferrer" class="clink">
+          <div class="clink-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          linkedin.com/in/ali-larbi
+        </a>
+        <a href="https://github.com/alilarbi" target="_blank" rel="noopener noreferrer" class="clink">
+          <div class="clink-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+          github.com/alilarbi
+        </a>
+
+      </div>
+    </div>
+    <form class="form" name="contact" action="https://formspree.io/f/xojzjgav" method="POST" onsubmit="handleSubmit(event)">
+      <div class="fg"><label class="fl">Your name</label><input class="fi" type="text" placeholder="Jane Smith" required></div>
+      <div class="fg"><label class="fl">Email address</label><input class="fi" type="email" placeholder="your@email.com" required></div>
+      <div class="fg"><label class="fl">Company</label><input class="fi" type="text" placeholder="Acme Semiconductor"></div>
+      <div class="fg"><label class="fl">What are you working on?</label><textarea class="ft" placeholder="Tell me about your NPI challenge, role, or opportunity..." required></textarea></div>
+      <button type="submit" class="fsub">Send message →</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-left">
+      <span class="footer-name">Ali Larbi</span>
+      <span class="footer-focus">NPI & Advanced Manufacturing Expert · Austin, TX</span>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:ali_larbi@outlook.com">ali_larbi@outlook.com</a>
+      <a href="https://www.linkedin.com/in/ali-larbi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/alilarbi" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+    <span class="footer-copy">Available for leadership roles & consulting engagements</span>
+  </div>
+</footer>
+
+
+<script>
+async function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.fsub');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.innerHTML = '<p style="padding:24px 0;font-size:15px;color:var(--teal);font-weight:600;line-height:1.6">✓ Message received.<br><span style="font-size:13px;font-weight:400;color:var(--ink-soft)">Ali will be in touch within 24 hours.</span></p>';
+    } else {
+      btn.textContent = 'Send message →';
+      btn.disabled = false;
+      alert('Something went wrong. Please email directly: ali_larbi@outlook.com');
+    }
+  } catch(err) {
+    btn.textContent = 'Send message →';
+    btn.disabled = false;
+    alert('Network error. Please email directly: ali_larbi@outlook.com');
+  }
+}
+</script>
+
+<script>
+function toggleMenu(){
+  const btn = document.getElementById('hamburger');
+  const menu = document.getElementById('mobileMenu');
+  btn.classList.toggle('open');
+  menu.classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobileMenu').classList.remove('open');
+}
+// Close menu on outside click
+document.addEventListener('click', function(e){
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('hamburger');
+  if(!menu.contains(e.target) && !btn.contains(e.target)){
+    closeMenu();
+  }
+});
+</script>
+</body>
+</html>

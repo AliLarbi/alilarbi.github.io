@@ -714,10 +714,12 @@ footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
       </div>
     </div>
     <form class="form" name="contact" action="https://formspree.io/f/xojzjgav" method="POST" onsubmit="handleSubmit(event)">
-      <div class="fg"><label class="fl">Your name</label><input class="fi" type="text" placeholder="Jane Smith" required></div>
-      <div class="fg"><label class="fl">Email address</label><input class="fi" type="email" placeholder="your@email.com" required></div>
-      <div class="fg"><label class="fl">Company</label><input class="fi" type="text" placeholder="Acme Semiconductor"></div>
-      <div class="fg"><label class="fl">What are you working on?</label><textarea class="ft" placeholder="Tell me about your NPI challenge, role, or opportunity..." required></textarea></div>
+      <input type="hidden" name="_subject" value="New message from alilarbi.github.io">
+      <input type="hidden" name="_next" value="https://alilarbi.github.io">
+      <div class="fg"><label class="fl">Your name</label><input class="fi" type="text" name="name" placeholder="Jane Smith" required></div>
+      <div class="fg"><label class="fl">Email address</label><input class="fi" type="email" name="email" placeholder="your@email.com" required></div>
+      <div class="fg"><label class="fl">Company</label><input class="fi" type="text" name="company" placeholder="Acme Semiconductor"></div>
+      <div class="fg"><label class="fl">What are you working on?</label><textarea class="ft" name="message" placeholder="Tell me about your NPI challenge, role, or opportunity..." required></textarea></div>
       <button type="submit" class="fsub">Send message →</button>
     </form>
   </div>
@@ -748,34 +750,42 @@ async function handleSubmit(e) {
   const originalText = btn.textContent;
   btn.textContent = 'Sending...';
   btn.disabled = true;
+
+  // Remove any previous error messages
+  const prev = form.querySelector('.form-error');
+  if(prev) prev.remove();
+
   try {
-    const res = await fetch(form.action, {
+    const res = await fetch('https://formspree.io/f/xojzjgav', {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
     });
+
     if (res.ok) {
       form.innerHTML = `
         <div style="padding:32px 0;text-align:center">
-          <div style="font-size:32px;margin-bottom:12px">✓</div>
+          <div style="font-size:40px;margin-bottom:12px">✓</div>
           <p style="font-size:16px;color:var(--teal);font-weight:600;margin-bottom:8px">Message received.</p>
-          <p style="font-size:14px;color:var(--ink-soft);line-height:1.6">Ali will be in touch within 24 hours.<br>In the meantime feel free to connect on <a href="https://www.linkedin.com/in/ali-larbi" target="_blank" style="color:var(--teal)">LinkedIn</a>.</p>
+          <p style="font-size:14px;color:var(--ink-soft);line-height:1.7">Ali will be in touch within 24 hours.<br>Connect on <a href="https://www.linkedin.com/in/ali-larbi" target="_blank" style="color:var(--teal)">LinkedIn</a> in the meantime.</p>
         </div>`;
     } else {
-      const data = await res.json();
+      const data = await res.json().catch(()=>({}));
       btn.textContent = originalText;
       btn.disabled = false;
       const errDiv = document.createElement('p');
-      errDiv.style.cssText = 'color:#C0392B;font-size:12px;margin-top:8px;text-align:center';
-      errDiv.textContent = 'Something went wrong. Please email: ali_larbi@outlook.com';
+      errDiv.className = 'form-error';
+      errDiv.style.cssText = 'color:#C0392B;font-size:12px;margin-top:10px;text-align:center;line-height:1.5';
+      errDiv.innerHTML = 'Could not send. Please email directly: <a href="mailto:ali_larbi@outlook.com" style="color:#C0392B">ali_larbi@outlook.com</a>';
       form.appendChild(errDiv);
     }
   } catch(err) {
     btn.textContent = originalText;
     btn.disabled = false;
     const errDiv = document.createElement('p');
-    errDiv.style.cssText = 'color:#C0392B;font-size:12px;margin-top:8px;text-align:center';
-    errDiv.textContent = 'Network error. Please email: ali_larbi@outlook.com';
+    errDiv.className = 'form-error';
+    errDiv.style.cssText = 'color:#C0392B;font-size:12px;margin-top:10px;text-align:center;line-height:1.5';
+    errDiv.innerHTML = 'Network error. Please email: <a href="mailto:ali_larbi@outlook.com" style="color:#C0392B">ali_larbi@outlook.com</a>';
     form.appendChild(errDiv);
   }
 }
